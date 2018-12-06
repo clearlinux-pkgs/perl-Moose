@@ -4,7 +4,7 @@
 #
 Name     : perl-Moose
 Version  : 2.2011
-Release  : 7
+Release  : 8
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2011.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2011.tar.gz
 Summary  : 'A postmodern object system for Perl 5'
