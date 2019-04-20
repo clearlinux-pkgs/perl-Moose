@@ -4,14 +4,15 @@
 #
 Name     : perl-Moose
 Version  : 2.2011
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2011.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2011.tar.gz
-Summary  : 'A postmodern object system for Perl 5'
+Summary  : A postmodern object system for Perl 5
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Moose-bin = %{version}-%{release}
 Requires: perl-Moose-lib = %{version}-%{release}
+Requires: perl-Moose-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(CPAN::Meta::Check)
 BuildRequires : perl(Class::Load)
@@ -45,6 +46,7 @@ BuildRequires : perl(Try::Tiny)
 %package bin
 Summary: bin components for the perl-Moose package.
 Group: Binaries
+Requires: perl-Moose-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-Moose package.
@@ -56,6 +58,7 @@ Group: Development
 Requires: perl-Moose-lib = %{version}-%{release}
 Requires: perl-Moose-bin = %{version}-%{release}
 Provides: perl-Moose-devel = %{version}-%{release}
+Requires: perl-Moose = %{version}-%{release}
 
 %description dev
 dev components for the perl-Moose package.
@@ -64,9 +67,18 @@ dev components for the perl-Moose package.
 %package lib
 Summary: lib components for the perl-Moose package.
 Group: Libraries
+Requires: perl-Moose-license = %{version}-%{release}
 
 %description lib
 lib components for the perl-Moose package.
+
+
+%package license
+Summary: license components for the perl-Moose package.
+Group: Default
+
+%description license
+license components for the perl-Moose package.
 
 
 %prep
@@ -87,6 +99,8 @@ fi
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Moose
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Moose/LICENSE
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -681,3 +695,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %files lib
 %defattr(-,root,root,-)
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Moose/Moose.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Moose/LICENSE
