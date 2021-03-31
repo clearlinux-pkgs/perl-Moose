@@ -1,4 +1,4 @@
-2.2014
+2.2015
 perl(CPAN::Meta::Check)
 perl(Class::Load)
 perl(Class::Load::XS)
@@ -8,6 +8,7 @@ perl(Devel::OverloadInfo)
 perl(Devel::StackTrace)
 perl(Dist::CheckConflicts)
 perl(Eval::Closure)
+perl(List::Util)
 perl(MRO::Compat)
 perl(Module::Runtime)
 perl(Module::Runtime::Conflicts)
