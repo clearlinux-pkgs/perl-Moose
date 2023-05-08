@@ -4,7 +4,7 @@
 #
 Name     : perl-Moose
 Version  : 2.2203
-Release  : 29
+Release  : 30
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2203.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2203.tar.gz
 Summary  : 'A postmodern object system for Perl 5'
