@@ -1,4 +1,4 @@
-2.2206
+2.2207
 perl(CPAN::Meta::Check)
 perl(Class::Load)
 perl(Class::Load::XS)
@@ -16,7 +16,6 @@ perl(Package::Stash)
 perl(Package::Stash::XS)
 perl(Params::Util)
 perl(Sub::Exporter)
-perl(Test::CleanNamespaces)
 perl(Test::Fatal)
 perl(Test::Needs)
 perl(Try::Tiny)
